@@ -243,4 +243,21 @@ document.addEventListener('pjax:error', (e) => {
     }
     typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
 }
-initTheme()</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude st-close-fill"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=1.13.3"></script><!-- Tianli-Talk--><!-- music--><div class="needEndHide" id="nav-music" onclick="sco.musicToggle()"><div id="nav-music-hoverTips">音乐已暂停</div><meting-js id="12200070465" server="netease" type="playlist" mutex="true" preload="none" data-lrctype="0" order="random" theme="var(--efu-main)"></meting-js></div></body></html><script>const posts=["2024/07/16/考研规划/","2024/07/12/Git教程/","2024/06/19/Java反射&动态代理/","2024/06/19/NodeJS安装/"];function toRandomPost(){ pjax.loadUrl(GLOBAL_CONFIG.root+posts[Math.floor(Math.random()*posts.length)]); }</script>
+initTheme()</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude st-close-fill"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=1.13.3"></script><!-- Tianli-Talk--><span class="needEndHide" id="efuTalk" onclick="togglePostChatContainer(); return false;" title="智能客服与搜索"><i class="solitude st-robot-fill"></i><span class="efuTalkTitle">智能客服与搜索</span></span><script>var postChatConfig = {
+backgroundColor: "var(--efu-main)",
+bottom: "60px",
+...null
+};
+
+let b = true;
+
+document.getElementById('efuTalk').addEventListener('click', function () {
+    this.classList.toggle('on');
+    let efu = this
+    b && setTimeout(() => {
+        document.getElementById('close-button').addEventListener('click', function () {
+            efu.classList.remove('on');
+        })
+    }, 0);
+    b = false
+});</script><script pjax src="https://ai.tianli0.top/static/public/postChatUser.min.js"></script><!-- music--><div class="needEndHide" id="nav-music" onclick="sco.musicToggle()"><div id="nav-music-hoverTips">音乐已暂停</div><meting-js id="12200070465" server="netease" type="playlist" mutex="true" preload="none" data-lrctype="0" order="random" theme="var(--efu-main)"></meting-js></div></body></html><script>const posts=["2024/07/16/考研规划/","2024/07/12/Git教程/","2024/06/19/Java反射&动态代理/","2024/06/19/NodeJS安装/"];function toRandomPost(){ pjax.loadUrl(GLOBAL_CONFIG.root+posts[Math.floor(Math.random()*posts.length)]); }</script>
