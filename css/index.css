@@ -6323,6 +6323,35 @@ span.tags-punctuation::before {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
+#footer #footer_deal .footer_mini_logo {
+  width: 50px;
+  height: 50px;
+  margin: 0 1rem;
+  cursor: pointer;
+  -webkit-transition: cubic-bezier(0, 0, 0, 1.29) 0.5s;
+  -moz-transition: cubic-bezier(0, 0, 0, 1.29) 0.5s;
+  -o-transition: cubic-bezier(0, 0, 0, 1.29) 0.5s;
+  -ms-transition: cubic-bezier(0, 0, 0, 1.29) 0.5s;
+  transition: cubic-bezier(0, 0, 0, 1.29) 0.5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 50px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  #footer #footer_deal .footer_mini_logo {
+    display: none;
+  }
+}
+#footer #footer_deal .footer_mini_logo:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
 #footer #st-footer {
   display: -webkit-box;
   display: -moz-box;
