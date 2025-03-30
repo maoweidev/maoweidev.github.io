@@ -111,7 +111,7 @@
     lightbox: 'fancybox',
     post_ai: {"key":"5d330f96d5bdd990ca321dbbdd4c27ab1ddc3f","talk":"我是maowei开发的摘要生成助理maoweiGPT，maoweiGPT在静态部署时进行摘要的撰写，并且在访客访问时通过maoweiCorrection转译后的文本摘要实现工具。我在这里只负责已经生成的摘要显示，你无法与我直接沟通，但我可以回答一些预设的问题。","randomPost":true},
     right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","music":{"start":"播放音乐","stop":"暂停音乐"},"translate":{"translateDelay":0,"defaultEncoding":2}},
-    lure: false,
+    lure: {"jump":"少侠，请留步！","back":"好久不见！"},
     expire: false,
 };</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
     is_post: true,
@@ -553,7 +553,7 @@ document.addEventListener('pjax:error', (e) => {
 initTheme()</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude st-close-fill"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=1.13.3"></script><!-- Tianli-Talk--><span class="needEndHide" id="efuTalk" onclick="togglePostChatContainer(); return false;" title="maoweiGPT"><i class="solitude st-robot-fill"></i><span class="efuTalkTitle">maoweiGPT</span></span><script>var postChatConfig = {
 backgroundColor: "var(--efu-main)",
 bottom: "60px",
-...null
+...{"upLoadWeb":true,"userTitle":"maoweiGPT","userDesc":"你好，我是maoweiGPT，有什么可以帮助你的？"}
 };
 
 let b = true;
