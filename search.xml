@@ -305,159 +305,6 @@
       </tags>
   </entry>
   <entry>
-    <title>NodeJS安装</title>
-    <url>/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h1 id="nodejs安装"><a class="markdownIt-Anchor" href="#nodejs安装"></a> NodeJS安装</h1>
-<h2 id="1-双击安装包"><a class="markdownIt-Anchor" href="#1-双击安装包"></a> 1. 双击安装包</h2>
-<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818155659933-17187679229581.png" alt="image-20220818155659933"></p>
-<h2 id="2-选择安装目录"><a class="markdownIt-Anchor" href="#2-选择安装目录"></a> 2. 选择安装目录</h2>
-<p>选择安装到一个，没有中文，没有空格的目录下（新建一个文件夹NodeJS）</p>
-<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818160024929-17187679402573.png" alt="image-20220818160024929"></p>
-<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818160241172-17187679524725.png" alt="image-20220818160241172"></p>
-<h2 id="3-验证nodejs环境变量"><a class="markdownIt-Anchor" href="#3-验证nodejs环境变量"></a> 3. 验证NodeJS环境变量</h2>
-<p>NodeJS 安装完毕后，会自动配置好环境变量，我们验证一下是否安装成功，通过： node -v</p>
-<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818160357897-17187679635117.png" alt="image-20220818160357897"></p>
-<h2 id="4-配置npm的全局安装路径"><a class="markdownIt-Anchor" href="#4-配置npm的全局安装路径"></a> 4. 配置npm的全局安装路径</h2>
-<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818161218016-17187679805859.png" alt="image-20220818161218016"></p>
-<p>使用管理员身份运行命令行，在命令行中，执行如下指令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set prefix &quot;E:\develop\NodeJS&quot;</span><br></pre></td></tr></table></figure>
-<p>注意：E:\develop\NodeJS 这个目录是NodeJS的安装目录</p>
-<h2 id="5-切换npm的淘宝镜像"><a class="markdownIt-Anchor" href="#5-切换npm的淘宝镜像"></a> 5. 切换npm的淘宝镜像</h2>
-<p>使用管理员身份运行命令行，在命令行中，执行如下指令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<h2 id="6-安装vue-cli"><a class="markdownIt-Anchor" href="#6-安装vue-cli"></a> 6. 安装Vue-cli</h2>
-<p>使用管理员身份运行命令行，在命令行中，执行如下指令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure>
-<p>这个过程中，会联网下载，可能会耗时几分钟，耐心等待。</p>
-<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818161134576-171876801013913.png" alt="image-20220818161134576"></p>
-]]></content>
-      <categories>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>NodeJS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>考研规划</title>
-    <url>/2024/07/16/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
-    <content><![CDATA[<h2 id="math"><a class="markdownIt-Anchor" href="#math"></a> Math</h2>
-<ol>
-<li>7月中旬前，基础阶段
-<ul>
-<li>《基础30讲》 高等数学</li>
-<li>《基础30讲》 线性代数</li>
-<li>《基础30讲》 概率论与数理统计</li>
-<li>《题源1000题》基础篇</li>
-<li>《真题大全解》1987年-2012年</li>
-</ul>
-</li>
-<li>7月中旬-9月中旬，强化阶段
-<ul>
-<li>《高等数学18讲》</li>
-<li>《线性代数9讲》</li>
-<li>《概率论与数理统计9讲》</li>
-<li>《题源1000题》强化篇</li>
-</ul>
-</li>
-<li>9月-12月，冲刺阶段
-<ul>
-<li>《真题大全解》2013年-2024年</li>
-<li>《命题人8套卷》</li>
-<li>《最后4套卷》</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="专业课"><a class="markdownIt-Anchor" href="#专业课"></a> 专业课</h2>
-<ol>
-<li>8月中旬前，基础阶段
-<ul>
-<li>基础复习</li>
-<li>搞定小题</li>
-</ul>
-</li>
-<li>8月中旬-9月，强化阶段
-<ul>
-<li>重新复习</li>
-<li>搞定大题</li>
-</ul>
-</li>
-<li>10月-12月，冲刺阶段
-<ul>
-<li>搞定套题: 真题+模拟题</li>
-<li>查缺补漏</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="english"><a class="markdownIt-Anchor" href="#english"></a> English</h2>
-<ol>
-<li>5月中旬前
-<ul>
-<li>大纲词汇</li>
-<li>语法长难句</li>
-</ul>
-</li>
-<li>6月、7月，旧年真题，侧重打基础
-<ul>
-<li>2002年-2009年共8年真题</li>
-</ul>
-</li>
-<li>8月、9月，真题精刷，侧重题型和解题
-<ul>
-<li>2010年-2017年共8年真题</li>
-<li>阅读写作专项提升</li>
-</ul>
-</li>
-<li>10月、11月，真题精刷，侧重题型和解题
-<ul>
-<li>2018年-2021年共4年真题</li>
-<li>复习重点/难点</li>
-</ul>
-</li>
-<li>11月-12月中旬，真题模考，预测25考点
-<ul>
-<li>2022年-2024年共3年真题</li>
-<li>复习所有真题，关注易错</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="politics"><a class="markdownIt-Anchor" href="#politics"></a> Politics</h2>
-<ol>
-<li>7-10月，基础阶段
-<ul>
-<li>徐涛强化班视频（马原、思修、史纲、毛中特、新思想）</li>
-<li>徐涛《考研政治核心考案》</li>
-<li>肖秀荣《考研政治1000题》（一刷）</li>
-<li>腿姐技巧班视频</li>
-<li>肖秀荣《考研政治背诵手册》</li>
-<li>肖秀荣《考研政治1000题》（二刷）</li>
-</ul>
-</li>
-<li>11月，强化阶段
-<ul>
-<li>继续看书：肖秀荣《考研政治背诵手册》</li>
-<li>背诵选择题知识点</li>
-<li>模考肖八选择题：刷选择题，主观题不用做</li>
-<li>开始复习时政</li>
-</ul>
-</li>
-<li>12月，冲刺+背诵阶段
-<ul>
-<li>反复看书：肖秀荣《考研政治背诵手册》，背诵选择题知识点</li>
-<li>肖四选择题刷三遍</li>
-<li>背诵肖四主观题</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Java反射&amp;动态代理</title>
     <url>/2024/06/19/Java%E5%8F%8D%E5%B0%84&amp;%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/</url>
     <content><![CDATA[<h1 id="1-反射"><a class="markdownIt-Anchor" href="#1-反射"></a> 1. 反射</h1>
@@ -695,5 +542,158 @@
       <tags>
         <tag>Java</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>NodeJS安装</title>
+    <url>/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="nodejs安装"><a class="markdownIt-Anchor" href="#nodejs安装"></a> NodeJS安装</h1>
+<h2 id="1-双击安装包"><a class="markdownIt-Anchor" href="#1-双击安装包"></a> 1. 双击安装包</h2>
+<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818155659933-17187679229581.png" alt="image-20220818155659933"></p>
+<h2 id="2-选择安装目录"><a class="markdownIt-Anchor" href="#2-选择安装目录"></a> 2. 选择安装目录</h2>
+<p>选择安装到一个，没有中文，没有空格的目录下（新建一个文件夹NodeJS）</p>
+<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818160024929-17187679402573.png" alt="image-20220818160024929"></p>
+<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818160241172-17187679524725.png" alt="image-20220818160241172"></p>
+<h2 id="3-验证nodejs环境变量"><a class="markdownIt-Anchor" href="#3-验证nodejs环境变量"></a> 3. 验证NodeJS环境变量</h2>
+<p>NodeJS 安装完毕后，会自动配置好环境变量，我们验证一下是否安装成功，通过： node -v</p>
+<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818160357897-17187679635117.png" alt="image-20220818160357897"></p>
+<h2 id="4-配置npm的全局安装路径"><a class="markdownIt-Anchor" href="#4-配置npm的全局安装路径"></a> 4. 配置npm的全局安装路径</h2>
+<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818161218016-17187679805859.png" alt="image-20220818161218016"></p>
+<p>使用管理员身份运行命令行，在命令行中，执行如下指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set prefix &quot;E:\develop\NodeJS&quot;</span><br></pre></td></tr></table></figure>
+<p>注意：E:\develop\NodeJS 这个目录是NodeJS的安装目录</p>
+<h2 id="5-切换npm的淘宝镜像"><a class="markdownIt-Anchor" href="#5-切换npm的淘宝镜像"></a> 5. 切换npm的淘宝镜像</h2>
+<p>使用管理员身份运行命令行，在命令行中，执行如下指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<h2 id="6-安装vue-cli"><a class="markdownIt-Anchor" href="#6-安装vue-cli"></a> 6. 安装Vue-cli</h2>
+<p>使用管理员身份运行命令行，在命令行中，执行如下指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure>
+<p>这个过程中，会联网下载，可能会耗时几分钟，耐心等待。</p>
+<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818161134576-171876801013913.png" alt="image-20220818161134576"></p>
+]]></content>
+      <categories>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>NodeJS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>考研规划</title>
+    <url>/2024/07/16/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<h2 id="math"><a class="markdownIt-Anchor" href="#math"></a> Math</h2>
+<ol>
+<li>7月中旬前，基础阶段
+<ul>
+<li>《基础30讲》 高等数学</li>
+<li>《基础30讲》 线性代数</li>
+<li>《基础30讲》 概率论与数理统计</li>
+<li>《题源1000题》基础篇</li>
+<li>《真题大全解》1987年-2012年</li>
+</ul>
+</li>
+<li>7月中旬-9月中旬，强化阶段
+<ul>
+<li>《高等数学18讲》</li>
+<li>《线性代数9讲》</li>
+<li>《概率论与数理统计9讲》</li>
+<li>《题源1000题》强化篇</li>
+</ul>
+</li>
+<li>9月-12月，冲刺阶段
+<ul>
+<li>《真题大全解》2013年-2024年</li>
+<li>《命题人8套卷》</li>
+<li>《最后4套卷》</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="专业课"><a class="markdownIt-Anchor" href="#专业课"></a> 专业课</h2>
+<ol>
+<li>8月中旬前，基础阶段
+<ul>
+<li>基础复习</li>
+<li>搞定小题</li>
+</ul>
+</li>
+<li>8月中旬-9月，强化阶段
+<ul>
+<li>重新复习</li>
+<li>搞定大题</li>
+</ul>
+</li>
+<li>10月-12月，冲刺阶段
+<ul>
+<li>搞定套题: 真题+模拟题</li>
+<li>查缺补漏</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="english"><a class="markdownIt-Anchor" href="#english"></a> English</h2>
+<ol>
+<li>5月中旬前
+<ul>
+<li>大纲词汇</li>
+<li>语法长难句</li>
+</ul>
+</li>
+<li>6月、7月，旧年真题，侧重打基础
+<ul>
+<li>2002年-2009年共8年真题</li>
+</ul>
+</li>
+<li>8月、9月，真题精刷，侧重题型和解题
+<ul>
+<li>2010年-2017年共8年真题</li>
+<li>阅读写作专项提升</li>
+</ul>
+</li>
+<li>10月、11月，真题精刷，侧重题型和解题
+<ul>
+<li>2018年-2021年共4年真题</li>
+<li>复习重点/难点</li>
+</ul>
+</li>
+<li>11月-12月中旬，真题模考，预测25考点
+<ul>
+<li>2022年-2024年共3年真题</li>
+<li>复习所有真题，关注易错</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="politics"><a class="markdownIt-Anchor" href="#politics"></a> Politics</h2>
+<ol>
+<li>7-10月，基础阶段
+<ul>
+<li>徐涛强化班视频（马原、思修、史纲、毛中特、新思想）</li>
+<li>徐涛《考研政治核心考案》</li>
+<li>肖秀荣《考研政治1000题》（一刷）</li>
+<li>腿姐技巧班视频</li>
+<li>肖秀荣《考研政治背诵手册》</li>
+<li>肖秀荣《考研政治1000题》（二刷）</li>
+</ul>
+</li>
+<li>11月，强化阶段
+<ul>
+<li>继续看书：肖秀荣《考研政治背诵手册》</li>
+<li>背诵选择题知识点</li>
+<li>模考肖八选择题：刷选择题，主观题不用做</li>
+<li>开始复习时政</li>
+</ul>
+</li>
+<li>12月，冲刺+背诵阶段
+<ul>
+<li>反复看书：肖秀荣《考研政治背诵手册》，背诵选择题知识点</li>
+<li>肖四选择题刷三遍</li>
+<li>背诵肖四主观题</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
   </entry>
 </search>
