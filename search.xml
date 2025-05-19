@@ -351,107 +351,6 @@
       </tags>
   </entry>
   <entry>
-    <title>考研规划</title>
-    <url>/2024/07/16/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
-    <content><![CDATA[<div id="postchat_postcontent"><h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ol>
-<li>7月中旬前，基础阶段<ul>
-<li>《基础30讲》 高等数学</li>
-<li>《基础30讲》 线性代数</li>
-<li>《基础30讲》 概率论与数理统计</li>
-<li>《题源1000题》基础篇</li>
-<li>《真题大全解》1987年-2012年</li>
-</ul>
-</li>
-<li>7月中旬-9月中旬，强化阶段<ul>
-<li>《高等数学18讲》</li>
-<li>《线性代数9讲》</li>
-<li>《概率论与数理统计9讲》</li>
-<li>《题源1000题》强化篇</li>
-</ul>
-</li>
-<li>9月-12月，冲刺阶段<ul>
-<li>《真题大全解》2013年-2024年</li>
-<li>《命题人8套卷》</li>
-<li>《最后4套卷》</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="专业课"><a href="#专业课" class="headerlink" title="专业课"></a>专业课</h2><ol>
-<li>8月中旬前，基础阶段<ul>
-<li>基础复习</li>
-<li>搞定小题</li>
-</ul>
-</li>
-<li>8月中旬-9月，强化阶段<ul>
-<li>重新复习</li>
-<li>搞定大题</li>
-</ul>
-</li>
-<li>10月-12月，冲刺阶段<ul>
-<li>搞定套题: 真题+模拟题</li>
-<li>查缺补漏</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="English"><a href="#English" class="headerlink" title="English"></a>English</h2><ol>
-<li>5月中旬前<ul>
-<li>大纲词汇</li>
-<li>语法长难句</li>
-</ul>
-</li>
-<li>6月、7月，旧年真题，侧重打基础<ul>
-<li>2002年-2009年共8年真题</li>
-</ul>
-</li>
-<li>8月、9月，真题精刷，侧重题型和解题<ul>
-<li>2010年-2017年共8年真题</li>
-<li>阅读写作专项提升</li>
-</ul>
-</li>
-<li>10月、11月，真题精刷，侧重题型和解题<ul>
-<li>2018年-2021年共4年真题</li>
-<li>复习重点&#x2F;难点</li>
-</ul>
-</li>
-<li>11月-12月中旬，真题模考，预测25考点<ul>
-<li>2022年-2024年共3年真题</li>
-<li>复习所有真题，关注易错</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="Politics"><a href="#Politics" class="headerlink" title="Politics"></a>Politics</h2><ol>
-<li>7-10月，基础阶段<ul>
-<li>徐涛强化班视频（马原、思修、史纲、毛中特、新思想）</li>
-<li>徐涛《考研政治核心考案》</li>
-<li>肖秀荣《考研政治1000题》（一刷）</li>
-<li>腿姐技巧班视频</li>
-<li>肖秀荣《考研政治背诵手册》</li>
-<li>肖秀荣《考研政治1000题》（二刷）</li>
-</ul>
-</li>
-<li>11月，强化阶段<ul>
-<li>继续看书：肖秀荣《考研政治背诵手册》</li>
-<li>背诵选择题知识点</li>
-<li>模考肖八选择题：刷选择题，主观题不用做</li>
-<li>开始复习时政</li>
-</ul>
-</li>
-<li>12月，冲刺+背诵阶段<ul>
-<li>反复看书：肖秀荣《考研政治背诵手册》，背诵选择题知识点</li>
-<li>肖四选择题刷三遍</li>
-<li>背诵肖四主观题</li>
-</ul>
-</li>
-</ol>
-</div>]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Java反射&amp;动态代理</title>
     <url>/2024/06/19/Java%E5%8F%8D%E5%B0%84&amp;%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/</url>
     <content><![CDATA[<div id="postchat_postcontent"><h1 id="1-反射"><a href="#1-反射" class="headerlink" title="1. 反射"></a>1. 反射</h1><h2 id="1-1-反射的概述："><a href="#1-1-反射的概述：" class="headerlink" title="1.1 反射的概述："></a>1.1 反射的概述：</h2><p>​	<strong>专业的解释（了解一下）：</strong></p>
@@ -680,5 +579,106 @@
       <tags>
         <tag>Java</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>考研规划</title>
+    <url>/2024/07/16/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<div id="postchat_postcontent"><h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ol>
+<li>7月中旬前，基础阶段<ul>
+<li>《基础30讲》 高等数学</li>
+<li>《基础30讲》 线性代数</li>
+<li>《基础30讲》 概率论与数理统计</li>
+<li>《题源1000题》基础篇</li>
+<li>《真题大全解》1987年-2012年</li>
+</ul>
+</li>
+<li>7月中旬-9月中旬，强化阶段<ul>
+<li>《高等数学18讲》</li>
+<li>《线性代数9讲》</li>
+<li>《概率论与数理统计9讲》</li>
+<li>《题源1000题》强化篇</li>
+</ul>
+</li>
+<li>9月-12月，冲刺阶段<ul>
+<li>《真题大全解》2013年-2024年</li>
+<li>《命题人8套卷》</li>
+<li>《最后4套卷》</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="专业课"><a href="#专业课" class="headerlink" title="专业课"></a>专业课</h2><ol>
+<li>8月中旬前，基础阶段<ul>
+<li>基础复习</li>
+<li>搞定小题</li>
+</ul>
+</li>
+<li>8月中旬-9月，强化阶段<ul>
+<li>重新复习</li>
+<li>搞定大题</li>
+</ul>
+</li>
+<li>10月-12月，冲刺阶段<ul>
+<li>搞定套题: 真题+模拟题</li>
+<li>查缺补漏</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="English"><a href="#English" class="headerlink" title="English"></a>English</h2><ol>
+<li>5月中旬前<ul>
+<li>大纲词汇</li>
+<li>语法长难句</li>
+</ul>
+</li>
+<li>6月、7月，旧年真题，侧重打基础<ul>
+<li>2002年-2009年共8年真题</li>
+</ul>
+</li>
+<li>8月、9月，真题精刷，侧重题型和解题<ul>
+<li>2010年-2017年共8年真题</li>
+<li>阅读写作专项提升</li>
+</ul>
+</li>
+<li>10月、11月，真题精刷，侧重题型和解题<ul>
+<li>2018年-2021年共4年真题</li>
+<li>复习重点&#x2F;难点</li>
+</ul>
+</li>
+<li>11月-12月中旬，真题模考，预测25考点<ul>
+<li>2022年-2024年共3年真题</li>
+<li>复习所有真题，关注易错</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="Politics"><a href="#Politics" class="headerlink" title="Politics"></a>Politics</h2><ol>
+<li>7-10月，基础阶段<ul>
+<li>徐涛强化班视频（马原、思修、史纲、毛中特、新思想）</li>
+<li>徐涛《考研政治核心考案》</li>
+<li>肖秀荣《考研政治1000题》（一刷）</li>
+<li>腿姐技巧班视频</li>
+<li>肖秀荣《考研政治背诵手册》</li>
+<li>肖秀荣《考研政治1000题》（二刷）</li>
+</ul>
+</li>
+<li>11月，强化阶段<ul>
+<li>继续看书：肖秀荣《考研政治背诵手册》</li>
+<li>背诵选择题知识点</li>
+<li>模考肖八选择题：刷选择题，主观题不用做</li>
+<li>开始复习时政</li>
+</ul>
+</li>
+<li>12月，冲刺+背诵阶段<ul>
+<li>反复看书：肖秀荣《考研政治背诵手册》，背诵选择题知识点</li>
+<li>肖四选择题刷三遍</li>
+<li>背诵肖四主观题</li>
+</ul>
+</li>
+</ol>
+</div>]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
   </entry>
 </search>
