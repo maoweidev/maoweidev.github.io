@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java实现视频压缩</title>
+    <url>/2025/06/16/Java%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E5%8E%8B%E7%BC%A9/</url>
+    <content><![CDATA[<div id="postchat_postcontent"><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.xuggle.mediatool.IMediaReader;</span><br><span class="line"><span class="keyword">import</span> com.xuggle.mediatool.IMediaWriter;</span><br><span class="line"><span class="keyword">import</span> com.xuggle.mediatool.ToolFactory;</span><br><span class="line"><span class="keyword">import</span> com.xuggle.xuggler.ICodec;</span><br><span class="line"><span class="keyword">import</span> com.xuggle.xuggler.IContainer;</span><br><span class="line"><span class="keyword">import</span> com.xuggle.xuggler.IStream;</span><br><span class="line"><span class="keyword">import</span> com.xuggle.xuggler.IStreamCoder;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">VideoCompressor</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (args.length != <span class="number">3</span>) &#123;</span><br><span class="line">            System.err.println(<span class="string">&quot;用法: java VideoCompressor &lt;输入文件&gt; &lt;输出文件&gt; &lt;目标比特率(kbps)&gt;&quot;</span>);</span><br><span class="line">            System.exit(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">String</span> <span class="variable">inputFile</span> <span class="operator">=</span> args[<span class="number">0</span>];</span><br><span class="line">        <span class="type">String</span> <span class="variable">outputFile</span> <span class="operator">=</span> args[<span class="number">1</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">targetBitrate</span> <span class="operator">=</span> Integer.parseInt(args[<span class="number">2</span>]) * <span class="number">1000</span>; <span class="comment">// 转换为bps</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            compressVideo(inputFile, outputFile, targetBitrate);</span><br><span class="line">            System.out.println(<span class="string">&quot;视频压缩完成: &quot;</span> + outputFile);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            System.err.println(<span class="string">&quot;压缩过程中发生错误: &quot;</span> + e.getMessage());</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">compressVideo</span><span class="params">(String inputFilePath, String outputFilePath, <span class="type">int</span> targetBitrate)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建媒体读取器</span></span><br><span class="line">        <span class="type">IMediaReader</span> <span class="variable">reader</span> <span class="operator">=</span> ToolFactory.makeReader(inputFilePath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建媒体写入器</span></span><br><span class="line">        <span class="type">IMediaWriter</span> <span class="variable">writer</span> <span class="operator">=</span> ToolFactory.makeWriter(outputFilePath, reader);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取输入视频的容器信息</span></span><br><span class="line">        <span class="type">IContainer</span> <span class="variable">inputContainer</span> <span class="operator">=</span> IContainer.make();</span><br><span class="line">        <span class="keyword">if</span> (inputContainer.open(inputFilePath, IContainer.Type.READ, <span class="literal">null</span>) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;无法打开输入文件: &quot;</span> + inputFilePath);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 查找视频流</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">videoStreamIndex</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="type">IStreamCoder</span> <span class="variable">videoCoder</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; inputContainer.getNumStreams(); i++) &#123;</span><br><span class="line">            <span class="type">IStream</span> <span class="variable">stream</span> <span class="operator">=</span> inputContainer.getStream(i);</span><br><span class="line">            <span class="type">IStreamCoder</span> <span class="variable">coder</span> <span class="operator">=</span> stream.getStreamCoder();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (coder.getCodecType() == ICodec.Type.CODEC_TYPE_VIDEO) &#123;</span><br><span class="line">                videoStreamIndex = i;</span><br><span class="line">                videoCoder = coder;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (videoStreamIndex == -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">&quot;未找到视频流&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打开编码器</span></span><br><span class="line">        <span class="keyword">if</span> (videoCoder.open() &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(<span class="string">&quot;无法打开视频编码器&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 添加视频流到写入器，设置目标比特率</span></span><br><span class="line">        writer.addVideoStream(<span class="number">0</span>, <span class="number">0</span>, </span><br><span class="line">                ICodec.ID.CODEC_ID_H264,</span><br><span class="line">                videoCoder.getWidth(), </span><br><span class="line">                videoCoder.getHeight());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置视频比特率</span></span><br><span class="line">        writer.getContainer().getStream(<span class="number">0</span>).getStreamCoder().setBitRate(targetBitrate);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 读取并处理视频帧</span></span><br><span class="line">        <span class="keyword">while</span> (reader.readPacket() == <span class="literal">null</span>) ;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭资源</span></span><br><span class="line">        writer.close();</span><br><span class="line">        reader.close();</span><br><span class="line">        videoCoder.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+</div>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Git</title>
     <url>/2024/07/12/Git%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<div id="postchat_postcontent"><p><img src="/2024/07/12/Git%E6%95%99%E7%A8%8B/gitlogo.png" alt="gitlogo"></p>
@@ -549,6 +559,38 @@
       </tags>
   </entry>
   <entry>
+    <title>NodeJS安装</title>
+    <url>/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<div id="postchat_postcontent"><h1 id="NodeJS安装"><a href="#NodeJS安装" class="headerlink" title="NodeJS安装"></a>NodeJS安装</h1><h2 id="1-双击安装包"><a href="#1-双击安装包" class="headerlink" title="1. 双击安装包"></a>1. 双击安装包</h2><p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818155659933-17187679229581.png" alt="image-20220818155659933"></p>
+<h2 id="2-选择安装目录"><a href="#2-选择安装目录" class="headerlink" title="2. 选择安装目录"></a>2. 选择安装目录</h2><p>选择安装到一个，没有中文，没有空格的目录下（新建一个文件夹NodeJS）</p>
+<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818160024929-17187679402573.png" alt="image-20220818160024929"></p>
+<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818160241172-17187679524725.png" alt="image-20220818160241172"></p>
+<h2 id="3-验证NodeJS环境变量"><a href="#3-验证NodeJS环境变量" class="headerlink" title="3. 验证NodeJS环境变量"></a>3. 验证NodeJS环境变量</h2><p>NodeJS 安装完毕后，会自动配置好环境变量，我们验证一下是否安装成功，通过： node -v</p>
+<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818160357897-17187679635117.png" alt="image-20220818160357897"></p>
+<h2 id="4-配置npm的全局安装路径"><a href="#4-配置npm的全局安装路径" class="headerlink" title="4. 配置npm的全局安装路径"></a>4. 配置npm的全局安装路径</h2><p> <img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818161218016-17187679805859.png" alt="image-20220818161218016"></p>
+<p>使用管理员身份运行命令行，在命令行中，执行如下指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set prefix &quot;E:\develop\NodeJS&quot;</span><br></pre></td></tr></table></figure>
+
+<p>注意：E:\develop\NodeJS 这个目录是NodeJS的安装目录</p>
+<h2 id="5-切换npm的淘宝镜像"><a href="#5-切换npm的淘宝镜像" class="headerlink" title="5. 切换npm的淘宝镜像"></a>5. 切换npm的淘宝镜像</h2><p>使用管理员身份运行命令行，在命令行中，执行如下指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-安装Vue-cli"><a href="#6-安装Vue-cli" class="headerlink" title="6. 安装Vue-cli"></a>6. 安装Vue-cli</h2><p>使用管理员身份运行命令行，在命令行中，执行如下指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure>
+
+<p>这个过程中，会联网下载，可能会耗时几分钟，耐心等待。</p>
+<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818161134576-171876801013913.png" alt="image-20220818161134576"></p>
+</div>]]></content>
+      <categories>
+        <category>安装</category>
+      </categories>
+      <tags>
+        <tag>NodeJS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>考研规划</title>
     <url>/2024/07/16/%E8%80%83%E7%A0%94%E8%A7%84%E5%88%92/</url>
     <content><![CDATA[<div id="postchat_postcontent"><h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ol>
@@ -648,37 +690,5 @@
       <categories>
         <category>考研</category>
       </categories>
-  </entry>
-  <entry>
-    <title>NodeJS安装</title>
-    <url>/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<div id="postchat_postcontent"><h1 id="NodeJS安装"><a href="#NodeJS安装" class="headerlink" title="NodeJS安装"></a>NodeJS安装</h1><h2 id="1-双击安装包"><a href="#1-双击安装包" class="headerlink" title="1. 双击安装包"></a>1. 双击安装包</h2><p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818155659933-17187679229581.png" alt="image-20220818155659933"></p>
-<h2 id="2-选择安装目录"><a href="#2-选择安装目录" class="headerlink" title="2. 选择安装目录"></a>2. 选择安装目录</h2><p>选择安装到一个，没有中文，没有空格的目录下（新建一个文件夹NodeJS）</p>
-<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818160024929-17187679402573.png" alt="image-20220818160024929"></p>
-<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818160241172-17187679524725.png" alt="image-20220818160241172"></p>
-<h2 id="3-验证NodeJS环境变量"><a href="#3-验证NodeJS环境变量" class="headerlink" title="3. 验证NodeJS环境变量"></a>3. 验证NodeJS环境变量</h2><p>NodeJS 安装完毕后，会自动配置好环境变量，我们验证一下是否安装成功，通过： node -v</p>
-<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818160357897-17187679635117.png" alt="image-20220818160357897"></p>
-<h2 id="4-配置npm的全局安装路径"><a href="#4-配置npm的全局安装路径" class="headerlink" title="4. 配置npm的全局安装路径"></a>4. 配置npm的全局安装路径</h2><p> <img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818161218016-17187679805859.png" alt="image-20220818161218016"></p>
-<p>使用管理员身份运行命令行，在命令行中，执行如下指令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set prefix &quot;E:\develop\NodeJS&quot;</span><br></pre></td></tr></table></figure>
-
-<p>注意：E:\develop\NodeJS 这个目录是NodeJS的安装目录</p>
-<h2 id="5-切换npm的淘宝镜像"><a href="#5-切换npm的淘宝镜像" class="headerlink" title="5. 切换npm的淘宝镜像"></a>5. 切换npm的淘宝镜像</h2><p>使用管理员身份运行命令行，在命令行中，执行如下指令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="6-安装Vue-cli"><a href="#6-安装Vue-cli" class="headerlink" title="6. 安装Vue-cli"></a>6. 安装Vue-cli</h2><p>使用管理员身份运行命令行，在命令行中，执行如下指令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure>
-
-<p>这个过程中，会联网下载，可能会耗时几分钟，耐心等待。</p>
-<p><img src="/2024/06/19/NodeJS%E5%AE%89%E8%A3%85/image-20220818161134576-171876801013913.png" alt="image-20220818161134576"></p>
-</div>]]></content>
-      <categories>
-        <category>安装</category>
-      </categories>
-      <tags>
-        <tag>NodeJS</tag>
-      </tags>
   </entry>
 </search>
